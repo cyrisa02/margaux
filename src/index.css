@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-artisan-bg text-artisan-text font-sans antialiased;
+}
+
+h1, h2, h3 {
+  @apply font-serif;
+}
+
+/* Accessibilité : focus visible */
+*:focus-visible {
+  @apply outline-none ring-2 ring-artisan-accent ring-offset-2;
+}

@@ -11,9 +11,11 @@ export default function Header() {
           <Link to="/" className="hover:text-artisan-accent transition-colors">Accueil</Link>
           <Link to="/a-propos" className="hover:text-artisan-accent transition-colors">À propos</Link>
           <Link to="/contact" className="hover:text-artisan-accent transition-colors">Contact</Link>
+          <Link to="/remarques" className="hover:text-artisan-accent transition-colors">Remarques</Link>
         </nav>
+        {/* Menu mobile simplifié */}
         <Link to="/contact" className="md:hidden bg-artisan-accent text-white px-4 py-2 rounded-full text-sm font-semibold">
-          Me contacter
+          Contact
         </Link>
       </div>
     </header>

@@ -4,7 +4,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
 import About from './components/About';
-import Contact from './components/Contact';
+import Contact from './components/Contact'; // Import ajouté
+import Remarques from './components/Remarques';
 import Footer from './components/Footer';
 
 function App() {
@@ -22,6 +23,28 @@ function App() {
               <>
                 <Helmet>
                   <title>Accueil | Margaux Hoare</title>
+                  <script type="application/ld+json">
+                    {`
+                      {
+                        "@context": "https://schema.org",
+                        "@type": "LocalBusiness",
+                        "name": "Margaux Hoare - Artiste Textile",
+                        "url": "https://margaux-hoare.vercel.app",
+                        "address": {
+                          "@type": "PostalAddress",
+                          "addressLocality": "Soissons",
+                          "addressRegion": "Hauts-de-France",
+                          "postalCode": "02200",
+                          "addressCountry": "FR"
+                        },
+                        "description": "Créations textiles poétiques et visionnaires. Tissage, feutrage, art visionnaire à Soissons.",
+                        "sameAs": [
+                          "https://www.instagram.com/margaux_hoare/",
+                          "https://www.facebook.com/margaux.hoare"
+                        ]
+                      }
+                    `}
+                  </script>
                 </Helmet>
                 <Hero />
                 <Gallery />
@@ -36,6 +59,7 @@ function App() {
                 <About />
               </>
             } />
+            {/* Route Contact ajoutée */}
             <Route path="/contact" element={
               <>
                 <Helmet>
@@ -44,6 +68,9 @@ function App() {
                 </Helmet>
                 <Contact />
               </>
+            } />
+            <Route path="/remarques" element={
+              <Remarques />
             } />
           </Routes>
         </main>
